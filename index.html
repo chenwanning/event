@@ -1,0 +1,230 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML DOM</title>
+<script>
+
+    function $(id){
+    return document.getElementById(id);
+    }
+
+    
+/*預設值*/
+function def(){
+            foc.className="tab";  
+            sport.className="tab";
+            entertainment.className="tab";
+            fun.className="tab";
+            life.className="tab";
+            video.className="tab";
+            fDiv.className="div";
+            sDiv.className="div";
+            eDiv.className="div";
+            funDiv.className="div";
+            lDiv.className="div";
+            vDiv.className="div";
+}
+
+/*使用者滑鼠移到上面*/
+function change(choice){
+    var foc=$("foc");
+    var sport=$("sport");
+    var entertainment=$("entertainment");
+    var fun=$("fun");
+    var life=$("life");
+    var video=$("video");
+    var fDiv=$("fDiv");   
+    var sDiv=$("sDiv");
+    var eDiv=$("eDiv");    
+    var funDiv=$("funDiv");
+    var lDiv=$("lDiv");
+    var vDiv=$("vDiv"); 
+
+       def();
+
+       if(choice==0){
+           
+            foc.className="tab-current";
+            fDiv.className="divCurrent";     
+
+        }else if(choice==1){  
+
+            sport.className="tab-current";
+            sDiv.className="divCurrent";
+
+        }else if(choice==2){
+
+             entertainment.className="tab-current";
+             eDiv.className="divCurrent";  
+
+        }else if(choice==3){
+
+             fun.className="tab-current";
+             funDiv.className="divCurrent"; 
+
+        }else if(choice==4){
+
+             life.className="tab-current";
+             lDiv.className="divCurrent"; 
+
+        }else if(choice==5){
+             video.className="tab-current";
+             vDiv.className="divCurrent"; 
+        
+    }
+}
+       
+  
+</script>
+
+<style type="text/css">
+
+/*預設*/
+.tab{font-size:20px;width:63px; height:25px;font-weight: normal;color:black;display: inline-block;
+padding:5px 20px 5px 20px;background-color: #f4f4f4;
+border: 0.5px solid #e2e2e6;
+margin:0px;
+text-align: center;
+}
+
+
+
+/*滑鼠移到上面*/
+.tab-current{font-size:20px;width:63px; height:25px; font-weight: bold;color:#7300ff;display: inline-block;
+padding:3px 20px 5px 20px;border: 1px solid #e2e2e6; border-top:3px solid #7300ff;
+border-bottom: none; 
+cursor: pointer;
+margin:0px;text-align: center;
+}
+
+
+/*預設*/
+.div{
+    display:none;
+ 
+}
+
+/*滑鼠移到上面*/
+.divCurrent{
+    display:block;
+     position:absolute;
+}
+
+/*樣式設定*/
+.font{
+    position:absolute;
+    z-index:2;
+    top:150px;
+    left:10px;
+    color:white;
+    font-size: 20px;
+    font-weight:bold;
+
+}
+
+img{
+    width:330px;
+    height: 185px;
+}
+.mainLeft{display:inline-block;vertical-align: top;border: 1px solid #e2e2e6;width:330px;
+    height: 185px;border-top:none}
+
+.mainRight{display:inline-block;vertical-align: top;border: 1px solid #e2e2e6;
+border-left: none;
+width:297px;
+height: 185px;border-top:none }
+
+.title{
+    font-weight: bold;
+    padding-top: 15px;
+    color:#324FE1;
+    font-size: 16px;
+    padding-left: 8px;
+}
+
+.font:hover,.title:hover{
+cursor: pointer;
+text-decoration-line: underline;
+}
+
+.text{color:#5f5f5f;
+font-size: 14px;
+padding-top: 8px;
+padding-left: 8px;
+}
+
+</style>
+</head>
+
+<body>
+    <div>
+        <div id="foc" class="tab-current" onmouseover="change(0);">焦點</div><div id="sport" class="tab" onmouseover="change(1);">運動</div><div id="entertainment" class="tab" onmouseover="change(2);">娛樂</div><div id="fun" class="tab" onmouseover="change(3);">FUN</div><div id="life" class="tab" onmouseover="change(4);">生活</div><div id="video" class="tab" onmouseover="change(5);">影音</div>
+    </div>
+    <div>
+        <div id="fDiv" class="divCurrent"><div class="mainLeft"><a href="https://tw.news.yahoo.com/%E8%B3%87%E9%80%9A-%E9%87%91%E8%9E%8D%E4%BF%9D%E9%9A%AA-%E6%9C%88%E6%94%B6%E5%85%A5%E9%80%BE6%E8%90%AC-215005000.html">
+       <img  src="https://s.yimg.com/uu/api/res/1.2/fVosKe2LO1g5AdlrzIfIuQ--/Zmk9dWxjcm9wO2N3PTY1NjtkeD0wO2NoPTM2OTtkeT0yOTt3PTM5MjtoPTMwODtjcj0xO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-images/GLB/2017-06-20/bd4b2ef0-555d-11e7-8261-2143668f41c2_25-.jpg" >
+        </a><a href="https://tw.news.yahoo.com/%E8%B3%87%E9%80%9A-%E9%87%91%E8%9E%8D%E4%BF%9D%E9%9A%AA-%E6%9C%88%E6%94%B6%E5%85%A5%E9%80%BE6%E8%90%AC-215005000.html"><div class="font">資通、金融保險 月收入逾6萬</div>
+        </a>
+        </div><div class="mainRight"><div class="title">男星性侵案審判無效 她們落淚</div><div class="text">「天才老爹」比爾寇斯比逃過一劫，他被控...</div>
+        <div class="title">員工殺人雇主要賠 老闆貼公告</div><div class="text">八里雙屍案判決惹議，有公司通知員工「若...</div>
+        <div class="title">「中國式過馬路」竟4千人斷魂</div><div class="text">把紅綠燈當參考，只要湊齊人就一起橫越馬...</div>
+        </div>
+        </div>  
+
+         <div id="sDiv" class="div"><div class="mainLeft"><a href="https://tw.news.yahoo.com/mlb-%E7%B5%90%E6%9D%9F18%E6%89%93%E6%95%B8%E7%84%A1%E5%AE%89%E6%89%93-%E4%BD%9B%E9%9B%B7%E7%91%9F%E9%96%8B%E8%BD%9F-033552409.html">
+       <img  src="https://s2.yimg.com/uu/api/res/1.2/NikgED50kx9bFyc1A5YJsA--/Zmk9dWxjcm9wO2N3PTQyNDc7ZHg9MDtjaD0yNDQ2O2R5PTM2O3c9MzkyO2g9MzA4O2NyPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en_us/News/ap_webfeeds/2369b94ad01b4c21be0f6a7067008216.jpg"  >
+        </a><a href="https://s2.yimg.com/uu/api/res/1.2/NikgED50kx9bFyc1A5YJsA--/Zmk9dWxjcm9wO2N3PTQyNDc7ZHg9MDtjaD0yNDQ2O2R5PTM2O3c9MzkyO2g9MzA4O2NyPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en_us/News/ap_webfeeds/2369b94ad01b4c21be0f6a7067008216.jpg"><div class="font">MLB／結束18打數無安打...</div>
+        </a></div><div class="mainRight"><div class="title">不只岱桑 他被K肋骨也森77了</div><div class="text">在棒球場上被這種危險球擊中，不是只有陽岱</div>
+        <div class="title">測試會結束 總仔直呼找到黃金啦</div><div class="text">看重「未來性」，希望能提升球隊板凳深度...</div>
+        <div class="title">本季成績超慘 自覺生涯差不多了</div><div class="text">「我認為我的手臂大概要被將軍了，長久以...</div>
+        </div>
+        </div>  
+
+         <div id="eDiv" class="div"><div class="mainLeft"><a href="https://tw.news.yahoo.com/%E5%8F%B0%E7%81%A3%E5%A5%B3%E5%AD%A9%E5%AF%86%E8%A8%932%E5%B9%B4%E6%97%A5%E6%9C%AC%E7%B0%BD%E7%B4%84-%E6%88%90%E6%B7%B1%E7%94%B0%E6%81%AD%E5%AD%90-%E7%B6%BE%E7%80%A8%E9%81%99%E5%B8%AB%E5%A6%B9-023632145.html">
+       <img  src="https://s1.yimg.com/uu/api/res/1.2/MG4ufqLVkfcOmFEtLZ0lYA--/Zmk9dWxjcm9wO2N3PTYwMDtkeD0wO2NoPTM4OTtkeT0xNjQ7dz0zOTI7aD0zMDg7Y3I9MTthcHBpZD15dGFjaHlvbg--/http://media.zenfs.com/zh-Hant-TW/homerun/nownews.com/b233c9a8ddde7cbb19c7428e6135ce4d" >
+        </a><a href="https://tw.news.yahoo.com/%E5%8F%B0%E7%81%A3%E5%A5%B3%E5%AD%A9%E5%AF%86%E8%A8%932%E5%B9%B4%E6%97%A5%E6%9C%AC%E7%B0%BD%E7%B4%84-%E6%88%90%E6%B7%B1%E7%94%B0%E6%81%AD%E5%AD%90-%E7%B6%BE%E7%80%A8%E9%81%99%E5%B8%AB%E5%A6%B9-023632145.html"><div class="font">台灣女孩密訓2年日本簽約...</div>
+        </a></div><div class="mainRight"><div class="title">昔日少女偶像 竟當了系主任</div><div class="text">36歲隋棠當媽後竟越變越美！</div>
+        <div class="title">遭男友哄騙 女星偷10萬給他</div><div class="text">曾賣檳榔賺錢給當時的男友花用，男友之後...</div>
+        <div class="title">假戲真做？爆同遊峇里島</div><div class="text">扮演情侶的宋仲基、宋慧喬，時常傳出假戲...</div>
+        </div>
+        </div>
+ 
+ <div id="funDiv" class="div"><div class="mainLeft"><a href="https://tw.news.yahoo.com/%E8%B6%85%E5%95%86%E8%B6%95%E6%8B%89%E9%BA%B5%E9%A2%A8%E6%BD%AE-%E7%B6%B2%E5%8F%8B%E5%98%86%E5%BA%97%E5%93%A1%E7%9C%9F%E7%9A%84%E5%BE%88%E8%A1%B0-042632225.html#0620gu">
+       <img  src="https://s1.yimg.com/uu/api/res/1.2/ECV_yJ6GMoIBVvHt7oJLVw--/Zmk9dWxjcm9wO2N3PTM1MDtkeD0wO2NoPTE3MDtkeT0wO3c9MzkyO2g9MzA4O2NyPTE7YXBwaWQ9eXRhY2h5b24-/https://s.yimg.com/os/creatr-images/GLB/2017-06-20/f534a460-5597-11e7-9f8c-a1de039f01ab_0620-1900-02.jpg" >
+        </a><a href="https://tw.news.yahoo.com/%E8%B6%85%E5%95%86%E8%B6%95%E6%8B%89%E9%BA%B5%E9%A2%A8%E6%BD%AE-%E7%B6%B2%E5%8F%8B%E5%98%86%E5%BA%97%E5%93%A1%E7%9C%9F%E7%9A%84%E5%BE%88%E8%A1%B0-042632225.html#0620gu"><div class="font">超商趕拉麵風潮</div>
+        </a></div><div class="mainRight"><div class="title">在台北月薪5萬 回南部竟剩…</div><div class="text">辭職回高雄老家，沒想到當地的相同職缺月</div>
+        <div class="title">一蘭白飯58元 網友揭原因了</div><div class="text">加了什麼料？菜單上白飯一碗要價58元，有</div>
+        <div class="title">棄百萬月薪 改行賣手工1顆</div><div class="text">包入整條冰心地瓜，內餡濕潤綿密...</div>
+        </div>
+        </div>
+
+
+ <div id="lDiv" class="div"><div class="mainLeft"><a href="https://tw.style.yahoo.com/36%E6%AD%B2%E9%9A%8B%E6%A3%A0%E7%95%B6%E5%AA%BD%E5%BE%8C%E7%AB%9F%E8%B6%8A%E8%AE%8A%E8%B6%8A%E7%BE%8E%E4%BA%BA%E5%A6%BB%E5%A5%B3%E7%A5%9E%E7%A9%BF%E6%90%AD3%E7%A7%98%E8%A8%A3%E5%A5%BD%E6%84%9F%E5%BA%A6%E6%BF%80%E5%8D%87-023801707.html#0620yu">
+       <img  src="https://s1.yimg.com/uu/api/res/1.2/slwAb_FXKBARR7qqan2tgQ--/Zmk9dWxjcm9wO2N3PTM1MDtkeD0wO2NoPTE3MDtkeT0wO3c9MzkyO2g9MzA4O2NyPTE7YXBwaWQ9eXRhY2h5b24-/https://s.yimg.com/os/creatr-images/GLB/2017-06-20/84a652f0-558a-11e7-9acf-3b7bed0b4c92_2017-06-20_16A2.jpg" >
+        </a><a href="https://tw.style.yahoo.com/36%E6%AD%B2%E9%9A%8B%E6%A3%A0%E7%95%B6%E5%AA%BD%E5%BE%8C%E7%AB%9F%E8%B6%8A%E8%AE%8A%E8%B6%8A%E7%BE%8E%E4%BA%BA%E5%A6%BB%E5%A5%B3%E7%A5%9E%E7%A9%BF%E6%90%AD3%E7%A7%98%E8%A8%A3%E5%A5%BD%E6%84%9F%E5%BA%A6%E6%BF%80%E5%8D%87-023801707.html#0620yu"><div class="font">36歲隋棠當媽後竟越變越美！</div>
+        </a></div><div class="mainRight"><div class="title">昔日少女偶像 竟當了系主任</div><div class="text">36歲隋棠當媽後竟越變越美！</div>
+        <div class="title">遭男友哄騙 女星偷10萬給他</div><div class="text">曾賣檳榔賺錢給當時的男友花用，男友之後...</div>
+        <div class="title">假戲真做？爆同遊峇里島</div><div class="text">扮演情侶的宋仲基、宋慧喬，時常傳出假戲...</div>
+        </div>
+        </div>
+
+         <div id="vDiv" class="div"><div class="mainLeft"><a href="https://tw.video.yahoo.com/celebrity-gossip-news/%E5%B0%8Fs%E7%94%9F%E6%97%A5%E7%AA%81%E7%88%86%E5%93%AD-%E5%90%83%E5%90%83-%E7%A5%A8%E6%88%BF%E6%85%98%E6%9C%89%E6%84%9F-055418692.html#0620ea">
+       <img  src="https://s.yimg.com/uu/api/res/1.2/Pqz7.BS9xqGzmHHWyjr6kA--/Zmk9dWxjcm9wO2N3PTM1MDtkeD0wO2NoPTE3MDtkeT0wO3c9MzkyO2g9MzA4O2NyPTE7YXBwaWQ9eXRhY2h5b24-/https://s.yimg.com/os/creatr-images/GLB/2017-06-19/64a2c990-54c5-11e7-89b0-8167e838e70d_2017-06-18_19A.jpg" >
+        </a><a href="https://tw.video.yahoo.com/celebrity-gossip-news/%E5%B0%8Fs%E7%94%9F%E6%97%A5%E7%AA%81%E7%88%86%E5%93%AD-%E5%90%83%E5%90%83-%E7%A5%A8%E6%88%BF%E6%85%98%E6%9C%89%E6%84%9F-055418692.html#0620ea"><div class="font">小S生日突爆哭　「吃吃」票房慘有感？</div>
+        </a></div><div class="mainRight"><div class="title">台人看不起這國…她心碎公開</div><div class="text">哈韓哈日，但對其他亞洲國家都很輕視，她</div>
+        <div class="title">星二代愛上酒店妹 老爸醬做</div><div class="text">流連聲色場所，搞到自己差點傾家蕩產，最...</div>
+        <div class="title">吃消夜不怕胖 專家教4招</div><div class="text">鹽酥雞也能吃？營養師指出只要搭配水果還...</div>
+        </div>
+        </div> 
+        </div>
+
+
+
+
+
+
+  
+</body>
+</html>
